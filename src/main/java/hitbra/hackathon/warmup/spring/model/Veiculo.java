@@ -34,7 +34,15 @@ public class Veiculo {
     @Id
     public String id;
 
-    public String getMarca() {
+    public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getMarca() {
         return marca;
     }
 
@@ -61,7 +69,7 @@ public class Veiculo {
     }
 
     
-    public double getValor() {
+    public Integer getValor() {
         return valor;
     }
 

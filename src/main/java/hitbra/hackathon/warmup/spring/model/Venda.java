@@ -7,57 +7,75 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="vendas")
 public class Venda {
 	
-	private String  idVeiculo;
-	private String valor;
+	private String valorDeVenda;
+	private String dataDeVenda;
+	private String idComprador;
 	private String nomeComprador;
-	private String documentoComprador;
-	private String data;
+	private String idVeiculo;
+	
 
 	@Id
     public String id;
 
-	public String getId_veiculo() {
-		return idVeiculo;
+
+
+	public String getValorDeVenda() {
+		return valorDeVenda;
 	}
 
-	public void setId_veiculo(String idVeiculo) {
-		this.idVeiculo = idVeiculo;
+
+
+	public void setValorDeVenda(String valorDeVenda) {
+		this.valorDeVenda = valorDeVenda;
 	}
 
-	
-	public String getValor() {
-		return valor;
+
+
+	public String getDataDeVenda() {
+		return dataDeVenda;
 	}
 
-	public void setValor(String valor) {
-		this.valor = valor;
+
+
+	public void setDataDeVenda(String dataDeVenda) {
+		this.dataDeVenda = dataDeVenda;
 	}
 
-	
+
+
+	public String getIdComprador() {
+		return idComprador;
+	}
+
+
+
+	public void setIdComprador(String idComprador) {
+		this.idComprador = idComprador;
+	}
+
+
+
 	public String getNomeComprador() {
 		return nomeComprador;
 	}
+
+
 
 	public void setNomeComprador(String nomeComprador) {
 		this.nomeComprador = nomeComprador;
 	}
 
-	
-	public String getDocumentoComprador() {
-		return documentoComprador;
+
+
+	public String getIdVeiculo() {
+		return idVeiculo;
 	}
 
-	public void setDocumentoComprador(String documentoComprador) {
-		this.documentoComprador = documentoComprador;
+
+
+	public void setIdVeiculo(String idVeiculo) {
+		this.idVeiculo = idVeiculo;
 	}
 
-	
-	public String getData() {
-		return data;
-	}
-
-	public void setData(String data) {
-		this.data = data;
-	}
 
 }

@@ -10,10 +10,10 @@ public interface VeiculoRepository extends MongoRepository<Veiculo, String> {
 	/**
 	 * Buscas Simples
 	 */
-	public List<Veiculo> findByMarca(String marca);
-    public List<Veiculo> findByModelo(String modelo);
-    public List<Veiculo> findByAno(String ano);
-    public List<Veiculo> findByValor(String valor);
+	public List<Veiculo> findByMarcaLike(String marca);
+    public List<Veiculo> findByModeloLike(String modelo);
+    public List<Veiculo> findByAnoLike(String ano);
+    public List<Veiculo> findByValor(Integer valor);
     public List<Veiculo> findByLocal(String local);
     public List<Veiculo> findByPlaca(String placa);
     public List<Veiculo> findByDataEntrada(String dataEntrada);
@@ -21,10 +21,11 @@ public interface VeiculoRepository extends MongoRepository<Veiculo, String> {
     /**
      * Buscas Complosta
      */
-    public List<Veiculo> findByMarcaAndModeloAndAno(String marca,String modelo, String ano);
-    public List<Veiculo> findByMarcaAndModelo(String marca, String modelo);
-    public List<Veiculo> findByMarcaAndAno(String marca, String ano);
-    public List<Veiculo> findByModeloAndAno(String modelo,String ano);
+    public List<Veiculo> findByMarcaLikeAndModeloLikeAndAnoLike(String marca,String modelo, String ano);
+    public List<Veiculo> findByMarcaLikeAndModeloLike(String marca, String modelo);
+    public List<Veiculo> findByMarcaLikeAndAnoLike(String marca, String ano);
+    public List<Veiculo> findByModeloLikeAndAnoLike(String modelo,String ano);
+	
     
     
 

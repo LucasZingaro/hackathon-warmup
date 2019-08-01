@@ -1,4 +1,4 @@
-package fiap.scj.restf.spring;
+package hitbra.hackathon.warmup.spring;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
